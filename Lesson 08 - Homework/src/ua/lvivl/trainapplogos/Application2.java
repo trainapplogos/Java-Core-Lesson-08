@@ -118,6 +118,7 @@ public class Application2 {
 			
 			if (flag) {
 				months_res.add(month);
+				flag = false;
 				System.out.println("   -" + month.name());
 			}
 		}
