@@ -77,15 +77,13 @@ public class Application2 {
 	//#1
 	public static Months monthExists(String month_str) {
 		Months[] months = Months.values();
-		Months month = null;
 		
-		for (Months month_val : months) {
-			if (month_val.name().equalsIgnoreCase(month_str)) {
-				month = month_val;
-				break;
+		for (Months month : months) {
+			if (month.name().equalsIgnoreCase(month_str)) {
+				return month;
 			} 
 		}
-		return month;
+		return null;
 	}
 	
 	public static Months[] returnMonths (int func, String season, int days) {
